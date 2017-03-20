@@ -1690,7 +1690,7 @@ html input[disabled] {
     opacity: .8; }
 
 .banner {
-  background: url(../img/banner.jpg) 0 0 no-repeat;
+  background: url(/static/banner.jpg) 0 0 no-repeat;
   background-size: cover; }
   .banner:after {
     position: relative;
@@ -2224,7 +2224,7 @@ html input[disabled] {
           animation-delay: .2s; }
 
 .video-feature-block {
-  background: url(../img/video-banner.jpg) 50% 50% no-repeat;
+  background: url(/static/video-banner.jpg) 50% 50% no-repeat;
   background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px; }
