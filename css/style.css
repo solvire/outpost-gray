@@ -717,8 +717,8 @@ fieldset[disabled] .s-btn {
 
 .s-icon--white-brd:focus, .s-icon--white-brd:hover {
   color: #fff;
-  background: #13b1cd;
-  border-color: #13b1cd;
+  background: #fff;
+  border-color: #fff;
 }
 
 .s-icon--white-bg {
@@ -731,29 +731,29 @@ fieldset[disabled] .s-btn {
 }
 
 .s-icon--white-bg:focus, .s-icon--white-bg:hover {
-  color: #13b1cd;
+  color: #fff;
   background: #fff;
   border-color: #fff;
 }
 
 .s-icon--primary-brd {
-  color: #13b1cd;
+  color: #fff;
   background: transparent;
   border-width: 0.0625rem;
   border-style: solid;
-  border-color: #13b1cd;
+  border-color: #fff;
   line-height: 1.4;
 }
 
 .s-icon--primary-brd:focus, .s-icon--primary-brd:hover {
   color: #fff;
-  background: #13b1cd;
-  border-color: #13b1cd;
+  background: #fff;
+  border-color: #fff;
 }
 
 .s-icon--primary-bg {
   color: #fff;
-  background: #13b1cd;
+  background: #fff;
   line-height: 1.6;
 }
 
@@ -1142,7 +1142,7 @@ fieldset[disabled] .s-btn {
   width: 100%;
   height: auto;
   display: table;
-  padding: 1rem 1.875rem;
+  padding: 1.5rem 1.875rem;
 }
 
 .s-header__container:before, .s-header__container:after {
@@ -1218,9 +1218,26 @@ fieldset[disabled] .s-btn {
     height: auto;
     float: left;
   }
-
-  .s-header__container {
-    display: none;
+	header {
+		position: static !important;
+	}
+	.s-swiper {
+		margin-top: 0 !important;
+	}
+  .s-header__logo.col-xs-2 {
+  	width: 100% !important;
+  	text-align: center;
+  }
+  .s-header__logo.col-xs-2 img {
+  	display: inline-block;
+  	max-width: 150px;
+  }
+  header .menu-custom {
+  	width: 100%;
+  }
+  header .menu-custom ul {
+  	padding: 0;
+  	text-align: center;
   }
 
   .mobile-big h1, h2, h3, h4, h5, h6 {
@@ -2097,7 +2114,7 @@ fieldset[disabled] .s-btn {
   display: block;
   font-size: 0.75rem;
   font-style: normal;
-  font-family: themify;
+  font-family: themify, sans-serif;
   color: #fff;
   line-height: 3rem;
   content: "\e627";
@@ -2312,7 +2329,7 @@ fieldset[disabled] .s-btn {
   top: 0;
   right: 0;
   font-size: 0.75rem;
-  font-family: themify;
+  font-family: themify, sans-serif;
   color: #656565;
   content: "\e646";
 }
@@ -2337,7 +2354,7 @@ fieldset[disabled] .s-btn {
   padding: 30px 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Arrows v1
