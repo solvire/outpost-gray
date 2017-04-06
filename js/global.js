@@ -52,54 +52,54 @@ var Global = function() {
 
   // Vertical Center Aligned
   // Note! This works only with promo block and background image via CSS.
-  var handleVerticalCenterAligned = function() {
-    $('.js__ver-center-aligned').each(function() {
-      $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-    });
-    $(window).resize(function() {
-      $('.js__ver-center-aligned').each(function() {
-        $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-      });
-    });
-  }
+  // var handleVerticalCenterAligned = function() {
+  //   $('.js__ver-center-aligned').each(function() {
+  //     $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
+  //   });
+  //   $(window).resize(function() {
+  //     $('.js__ver-center-aligned').each(function() {
+  //       $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
+  //     });
+  //   });
+  // }
 
   // handle group element heights
-  var handleEqualHeight = function() {
-   $('[data-auto-height]').each(function() {
-      var parent = $(this);
-      var items = $('[data-height]', parent);
-      var height = 0;
-      var mode = parent.attr('data-mode');
-      var offset = parseInt(parent.attr('data-offset') ? parent.attr('data-offset') : 0);
-
-      items.each(function() {
-        if ($(this).attr('data-height') == "height") {
-          $(this).css('height', '');
-        } else {
-          $(this).css('min-height', '');
-        }
-
-        var height_ = (mode == 'base-height' ? $(this).outerHeight() : $(this).outerHeight(true));
-        if (height_ > height) {
-          height = height_;
-        }
-      });
-
-      height = height + offset;
-
-      items.each(function() {
-        if ($(this).attr('data-height') == "height") {
-          $(this).css('height', height);
-        } else {
-          $(this).css('min-height', height);
-        }
-      });
-
-      if(parent.attr('data-related')) {
-        $(parent.attr('data-related')).css('height', parent.height());
-      }
-   });       
-  }
+  // var handleEqualHeight = function() {
+  //  $('[data-auto-height]').each(function() {
+  //     var parent = $(this);
+  //     var items = $('[data-height]', parent);
+  //     var height = 0;
+  //     var mode = parent.attr('data-mode');
+  //     var offset = parseInt(parent.attr('data-offset') ? parent.attr('data-offset') : 0);
+  //
+  //     items.each(function() {
+  //       if ($(this).attr('data-height') == "height") {
+  //         $(this).css('height', '');
+  //       } else {
+  //         $(this).css('min-height', '');
+  //       }
+  //
+  //       var height_ = (mode == 'base-height' ? $(this).outerHeight() : $(this).outerHeight(true));
+  //       if (height_ > height) {
+  //         height = height_;
+  //       }
+  //     });
+  //
+  //     height = height + offset;
+  //
+  //     items.each(function() {
+  //       if ($(this).attr('data-height') == "height") {
+  //         $(this).css('height', height);
+  //       } else {
+  //         $(this).css('min-height', height);
+  //       }
+  //     });
+  //
+  //     if(parent.attr('data-related')) {
+  //       $(parent.attr('data-related')).css('height', parent.height());
+  //     }
+  //  });
+  // }
 
   var popup = function () {
       $('button').magnificPopup({
