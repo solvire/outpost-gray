@@ -9,61 +9,9 @@ var Global = function() {
       interval: 5000,
       pause: 'hover'
     });
-  }
+  };
 
-  // Scroll To Section
-  var handleScrollToSection = function() {
-
-      $('a[href*=#js__scroll-to-]:not([href=#js__scroll-to-]), .menu-custom a').on('click', function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 215
-            }, 1000);
-            return false;
-          }
-        }
-      });
-
-  }
-
-  // Handle Promo Section
-  var handlePromoSection = function() {
-    $('.js__fullwidth-img').each(function() {
-      $(this).css('background-image', 'url(' + $(this).children('img').attr('src') + ')');
-      $(this).children('img').hide();
-    });
-  }
-
-  // Handle Overlay
-  var handleOverlay = function() {
-    var overlay = $('.js__bg-overlay'),
-      headerOverlay = $('.js__header-overlay'),
-      trigger = $('.js__trigger');
-
-    trigger.on('click', function() {
-      overlay.toggleClass('-is-open');
-      headerOverlay.toggleClass('-is-open');
-      trigger.toggleClass('-is-active');
-    });
-  }
-
-  // Vertical Center Aligned
-  // Note! This works only with promo block and background image via CSS.
-  // var handleVerticalCenterAligned = function() {
-  //   $('.js__ver-center-aligned').each(function() {
-  //     $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-  //   });
-  //   $(window).resize(function() {
-  //     $('.js__ver-center-aligned').each(function() {
-  //       $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-  //     });
-  //   });
-  // }
-
-  // handle group element heights
+    // handle group element heights
   // var handleEqualHeight = function() {
   //  $('[data-auto-height]').each(function() {
   //     var parent = $(this);
@@ -108,15 +56,11 @@ var Global = function() {
             type: 'inline'
         }
       });
-  }
+  };
 
   return {
     init: function() {
       handleBootstrapComponents(); // initial setup for Bootstrap Components
-      handleScrollToSection(); // initial setup for Scroll To Section
-      handlePromoSection(); // initial setup for Promo Section
-      handleOverlay(); // initial setup for Overlay
-      handleVerticalCenterAligned(); // initial setup for Vertical Center Aligned
       handleEqualHeight(); // initial setup for Equal Height
       popup();
     }
